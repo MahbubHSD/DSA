@@ -2,10 +2,16 @@
 
 Unique solutions from the NeetCode 150 and Top Interview 150 lists.
 
+Each file is linked below. Approach variants use names like `<problem>_<strategy>.py`, such as `two_sum_hashing.py` or `binary_search_recursive.py`.
+
 ## Array
 - [best_time_to_buy_and_sell_stock.py](Array/best_time_to_buy_and_sell_stock.py) — Best Time To Buy And Sell Stock
 - [container_with_most_water.py](Array/container_with_most_water.py) — Container With Most Water
 - [contains_duplicate.py](Array/contains_duplicate.py) — Contains Duplicate
+- [contains_duplicate_set.py](Array/contains_duplicate_set.py) — Contains Duplicate Set
+- [contains_duplicate_set_hashing.py](Array/contains_duplicate_set_hashing.py) — Contains Duplicate Set Hashing
+- [contains_duplicate_sort.py](Array/contains_duplicate_sort.py) — Contains Duplicate Sort
+- [contains_duplicate_sort_sorting.py](Array/contains_duplicate_sort_sorting.py) — Contains Duplicate Sort Sorting
 - [find_all_numbers_disappeared.py](Array/find_all_numbers_disappeared.py) — Find All Numbers Disappeared
 - [find_first_and_last_position.py](Array/find_first_and_last_position.py) — Find First And Last Position
 - [find_pivot_index.py](Array/find_pivot_index.py) — Find Pivot Index
@@ -26,6 +32,7 @@ Unique solutions from the NeetCode 150 and Top Interview 150 lists.
 - [summary_ranges.py](Array/summary_ranges.py) — Summary Ranges
 - [trapping_rain_water.py](Array/trapping_rain_water.py) — Trapping Rain Water
 - [two_sum.py](Array/two_sum.py) — Two Sum
+- [two_sum_bruteforce.py](Array/two_sum_bruteforce.py) — Two Sum Bruteforce
 - [valid_anagram.py](Array/valid_anagram.py) — Valid Anagram
 
 ## Hashing
@@ -41,6 +48,7 @@ Unique solutions from the NeetCode 150 and Top Interview 150 lists.
 - [four_sum.py](Two_Pointers/four_sum.py) — Four Sum
 - [three_sum.py](Two_Pointers/three_sum.py) — Three Sum
 - [two_sum_ii.py](Two_Pointers/two_sum_ii.py) — Two Sum Ii
+- [two_sum_ii_sorting.py](Two_Pointers/two_sum_ii_sorting.py) — Two Sum Ii Sorting
 - [valid_palindrome.py](Two_Pointers/valid_palindrome.py) — Valid Palindrome
 - [valid_triangle_number.py](Two_Pointers/valid_triangle_number.py) — Valid Triangle Number
 
@@ -60,9 +68,14 @@ Unique solutions from the NeetCode 150 and Top Interview 150 lists.
 - [remove_k_digits.py](Stack/remove_k_digits.py) — Remove K Digits
 - [simplify_path.py](Stack/simplify_path.py) — Simplify Path
 - [valid_parentheses.py](Stack/valid_parentheses.py) — Valid Parentheses
+- [valid_parentheses_counter.py](Stack/valid_parentheses_counter.py) — Valid Parentheses Counter
+- [valid_parentheses_counter_hashing.py](Stack/valid_parentheses_counter_hashing.py) — Valid Parentheses Counter Hashing
 
 ## Binary Search
 - [binary_search.py](Binary_Search/binary_search.py) — Binary Search
+- [binary_search_binary_search.py](Binary_Search/binary_search_binary_search.py) — Binary Search Binary Search
+- [binary_search_recursive.py](Binary_Search/binary_search_recursive.py) — Binary Search Recursive
+- [binary_search_recursive_two_pointer.py](Binary_Search/binary_search_recursive_two_pointer.py) — Binary Search Recursive Two Pointer
 - [find_minimum_in_rotated_sorted_array.py](Binary_Search/find_minimum_in_rotated_sorted_array.py) — Find Minimum In Rotated Sorted Array
 - [find_peak_element.py](Binary_Search/find_peak_element.py) — Find Peak Element
 - [search_a_2d_matrix.py](Binary_Search/search_a_2d_matrix.py) — Search A 2D Matrix
@@ -83,48 +96,88 @@ Unique solutions from the NeetCode 150 and Top Interview 150 lists.
 
 ## Linked List
 - [add_two_numbers.py](Linked_List/add_two_numbers.py) — Add Two Numbers
+- [add_two_numbers_tree.py](Linked_List/add_two_numbers_tree.py) — Add Two Numbers Tree
 - [copy_list_with_random_pointer.py](Linked_List/copy_list_with_random_pointer.py) — Copy List With Random Pointer
+- [copy_list_with_random_pointer_tree.py](Linked_List/copy_list_with_random_pointer_tree.py) — Copy List With Random Pointer Tree
 - [delete_node_in_a_linked_list.py](Linked_List/delete_node_in_a_linked_list.py) — Delete Node In A Linked List
+- [delete_node_in_a_linked_list_tree.py](Linked_List/delete_node_in_a_linked_list_tree.py) — Delete Node In A Linked List Tree
 - [intersection_of_two_linked_lists.py](Linked_List/intersection_of_two_linked_lists.py) — Intersection Of Two Linked Lists
+- [intersection_of_two_linked_lists_tree.py](Linked_List/intersection_of_two_linked_lists_tree.py) — Intersection Of Two Linked Lists Tree
 - [linked_list_cycle.py](Linked_List/linked_list_cycle.py) — Linked List Cycle
+- [linked_list_cycle_tree.py](Linked_List/linked_list_cycle_tree.py) — Linked List Cycle Tree
 - [lru_cache.py](Linked_List/lru_cache.py) — Lru Cache
 - [merge_two_sorted_lists.py](Linked_List/merge_two_sorted_lists.py) — Merge Two Sorted Lists
+- [merge_two_sorted_lists_tree.py](Linked_List/merge_two_sorted_lists_tree.py) — Merge Two Sorted Lists Tree
 - [middle_of_the_linked_list.py](Linked_List/middle_of_the_linked_list.py) — Middle Of The Linked List
+- [middle_of_the_linked_list_binary_search.py](Linked_List/middle_of_the_linked_list_binary_search.py) — Middle Of The Linked List Binary Search
 - [odd_even_linked_list.py](Linked_List/odd_even_linked_list.py) — Odd Even Linked List
+- [odd_even_linked_list_tree.py](Linked_List/odd_even_linked_list_tree.py) — Odd Even Linked List Tree
 - [palindrome_linked_list.py](Linked_List/palindrome_linked_list.py) — Palindrome Linked List
+- [palindrome_linked_list_tree.py](Linked_List/palindrome_linked_list_tree.py) — Palindrome Linked List Tree
 - [partition_list.py](Linked_List/partition_list.py) — Partition List
+- [partition_list_tree.py](Linked_List/partition_list_tree.py) — Partition List Tree
 - [remove_nth_node_from_end.py](Linked_List/remove_nth_node_from_end.py) — Remove Nth Node From End
+- [remove_nth_node_from_end_tree.py](Linked_List/remove_nth_node_from_end_tree.py) — Remove Nth Node From End Tree
 - [reorder_list.py](Linked_List/reorder_list.py) — Reorder List
+- [reorder_list_tree.py](Linked_List/reorder_list_tree.py) — Reorder List Tree
 - [reverse_linked_list.py](Linked_List/reverse_linked_list.py) — Reverse Linked List
+- [reverse_linked_list_tree.py](Linked_List/reverse_linked_list_tree.py) — Reverse Linked List Tree
 - [reverse_nodes_in_k_group.py](Linked_List/reverse_nodes_in_k_group.py) — Reverse Nodes In K Group
+- [reverse_nodes_in_k_group_tree.py](Linked_List/reverse_nodes_in_k_group_tree.py) — Reverse Nodes In K Group Tree
 - [rotate_list.py](Linked_List/rotate_list.py) — Rotate List
+- [rotate_list_tree.py](Linked_List/rotate_list_tree.py) — Rotate List Tree
 - [sort_list.py](Linked_List/sort_list.py) — Sort List
+- [sort_list_tree.py](Linked_List/sort_list_tree.py) — Sort List Tree
 - [swap_nodes_in_pairs.py](Linked_List/swap_nodes_in_pairs.py) — Swap Nodes In Pairs
+- [swap_nodes_in_pairs_tree.py](Linked_List/swap_nodes_in_pairs_tree.py) — Swap Nodes In Pairs Tree
 
 ## Trees
 - [average_of_levels_in_binary_tree.py](Trees/average_of_levels_in_binary_tree.py) — Average Of Levels In Binary Tree
+- [average_of_levels_in_binary_tree_binary_search.py](Trees/average_of_levels_in_binary_tree_binary_search.py) — Average Of Levels In Binary Tree Binary Search
 - [balanced_binary_tree.py](Trees/balanced_binary_tree.py) — Balanced Binary Tree
+- [balanced_binary_tree_binary_search.py](Trees/balanced_binary_tree_binary_search.py) — Balanced Binary Tree Binary Search
 - [binary_tree_inorder_traversal.py](Trees/binary_tree_inorder_traversal.py) — Binary Tree Inorder Traversal
+- [binary_tree_inorder_traversal_binary_search.py](Trees/binary_tree_inorder_traversal_binary_search.py) — Binary Tree Inorder Traversal Binary Search
 - [binary_tree_level_order_traversal.py](Trees/binary_tree_level_order_traversal.py) — Binary Tree Level Order Traversal
+- [binary_tree_level_order_traversal_binary_search.py](Trees/binary_tree_level_order_traversal_binary_search.py) — Binary Tree Level Order Traversal Binary Search
 - [binary_tree_maximum_path_sum.py](Trees/binary_tree_maximum_path_sum.py) — Binary Tree Maximum Path Sum
+- [binary_tree_maximum_path_sum_binary_search.py](Trees/binary_tree_maximum_path_sum_binary_search.py) — Binary Tree Maximum Path Sum Binary Search
 - [binary_tree_paths.py](Trees/binary_tree_paths.py) — Binary Tree Paths
+- [binary_tree_paths_binary_search.py](Trees/binary_tree_paths_binary_search.py) — Binary Tree Paths Binary Search
 - [binary_tree_right_side_view.py](Trees/binary_tree_right_side_view.py) — Binary Tree Right Side View
+- [binary_tree_right_side_view_binary_search.py](Trees/binary_tree_right_side_view_binary_search.py) — Binary Tree Right Side View Binary Search
 - [binary_tree_zigzag_level_order_traversal.py](Trees/binary_tree_zigzag_level_order_traversal.py) — Binary Tree Zigzag Level Order Traversal
+- [binary_tree_zigzag_level_order_traversal_binary_search.py](Trees/binary_tree_zigzag_level_order_traversal_binary_search.py) — Binary Tree Zigzag Level Order Traversal Binary Search
 - [construct_binary_tree.py](Trees/construct_binary_tree.py) — Construct Binary Tree
+- [construct_binary_tree_binary_search.py](Trees/construct_binary_tree_binary_search.py) — Construct Binary Tree Binary Search
 - [convert_sorted_array_to_binary_search_tree.py](Trees/convert_sorted_array_to_binary_search_tree.py) — Convert Sorted Array To Binary Search Tree
+- [convert_sorted_array_to_binary_search_tree_binary_search.py](Trees/convert_sorted_array_to_binary_search_tree_binary_search.py) — Convert Sorted Array To Binary Search Tree Binary Search
 - [count_good_nodes_in_binary_tree.py](Trees/count_good_nodes_in_binary_tree.py) — Count Good Nodes In Binary Tree
+- [count_good_nodes_in_binary_tree_binary_search.py](Trees/count_good_nodes_in_binary_tree_binary_search.py) — Count Good Nodes In Binary Tree Binary Search
 - [diameter_of_binary_tree.py](Trees/diameter_of_binary_tree.py) — Diameter Of Binary Tree
+- [diameter_of_binary_tree_binary_search.py](Trees/diameter_of_binary_tree_binary_search.py) — Diameter Of Binary Tree Binary Search
 - [invert_binary_tree.py](Trees/invert_binary_tree.py) — Invert Binary Tree
+- [invert_binary_tree_binary_search.py](Trees/invert_binary_tree_binary_search.py) — Invert Binary Tree Binary Search
 - [kth_smallest_element_in_a_bst.py](Trees/kth_smallest_element_in_a_bst.py) — Kth Smallest Element In A Bst
+- [kth_smallest_element_in_a_bst_tree.py](Trees/kth_smallest_element_in_a_bst_tree.py) — Kth Smallest Element In A Bst Tree
 - [lowest_common_ancestor_of_a_binary_tree.py](Trees/lowest_common_ancestor_of_a_binary_tree.py) — Lowest Common Ancestor Of A Binary Tree
+- [lowest_common_ancestor_of_a_binary_tree_binary_search.py](Trees/lowest_common_ancestor_of_a_binary_tree_binary_search.py) — Lowest Common Ancestor Of A Binary Tree Binary Search
 - [maximum_depth_of_binary_tree.py](Trees/maximum_depth_of_binary_tree.py) — Maximum Depth Of Binary Tree
+- [maximum_depth_of_binary_tree_binary_search.py](Trees/maximum_depth_of_binary_tree_binary_search.py) — Maximum Depth Of Binary Tree Binary Search
 - [path_sum.py](Trees/path_sum.py) — Path Sum
 - [path_sum_ii.py](Trees/path_sum_ii.py) — Path Sum Ii
+- [path_sum_ii_tree.py](Trees/path_sum_ii_tree.py) — Path Sum Ii Tree
+- [path_sum_tree.py](Trees/path_sum_tree.py) — Path Sum Tree
 - [same_tree.py](Trees/same_tree.py) — Same Tree
+- [same_tree_tree.py](Trees/same_tree_tree.py) — Same Tree Tree
 - [serialize_and_deserialize_binary_tree.py](Trees/serialize_and_deserialize_binary_tree.py) — Serialize And Deserialize Binary Tree
+- [serialize_and_deserialize_binary_tree_binary_search.py](Trees/serialize_and_deserialize_binary_tree_binary_search.py) — Serialize And Deserialize Binary Tree Binary Search
 - [subtree_of_another_tree.py](Trees/subtree_of_another_tree.py) — Subtree Of Another Tree
+- [subtree_of_another_tree_tree.py](Trees/subtree_of_another_tree_tree.py) — Subtree Of Another Tree Tree
 - [sum_root_to_leaf_numbers.py](Trees/sum_root_to_leaf_numbers.py) — Sum Root To Leaf Numbers
+- [sum_root_to_leaf_numbers_tree.py](Trees/sum_root_to_leaf_numbers_tree.py) — Sum Root To Leaf Numbers Tree
 - [validate_binary_search_tree.py](Trees/validate_binary_search_tree.py) — Validate Binary Search Tree
+- [validate_binary_search_tree_binary_search.py](Trees/validate_binary_search_tree_binary_search.py) — Validate Binary Search Tree Binary Search
 
 ## Heap
 - [find_kth_largest_element.py](Heap/find_kth_largest_element.py) — Find Kth Largest Element
@@ -143,13 +196,17 @@ Unique solutions from the NeetCode 150 and Top Interview 150 lists.
 
 ## Graphs
 - [all_paths_from_source_to_target.py](Graphs/all_paths_from_source_to_target.py) — All Paths From Source To Target
+- [all_paths_from_source_to_target_graph.py](Graphs/all_paths_from_source_to_target_graph.py) — All Paths From Source To Target Graph
 - [clone_graph.py](Graphs/clone_graph.py) — Clone Graph
+- [clone_graph_graph.py](Graphs/clone_graph_graph.py) — Clone Graph Graph
 - [course_schedule.py](Graphs/course_schedule.py) — Course Schedule
 - [critical_connections_in_a_network.py](Graphs/critical_connections_in_a_network.py) — Critical Connections In A Network
 - [evaluate_division.py](Graphs/evaluate_division.py) — Evaluate Division
 - [find_eventual_safe_states.py](Graphs/find_eventual_safe_states.py) — Find Eventual Safe States
+- [find_eventual_safe_states_graph.py](Graphs/find_eventual_safe_states_graph.py) — Find Eventual Safe States Graph
 - [find_the_town_judge.py](Graphs/find_the_town_judge.py) — Find The Town Judge
 - [is_graph_bipartite.py](Graphs/is_graph_bipartite.py) — Is Graph Bipartite
+- [is_graph_bipartite_graph.py](Graphs/is_graph_bipartite_graph.py) — Is Graph Bipartite Graph
 - [keys_and_rooms.py](Graphs/keys_and_rooms.py) — Keys And Rooms
 - [min_cost_to_connect_all_points.py](Graphs/min_cost_to_connect_all_points.py) — Min Cost To Connect All Points
 - [number_of_connected_components.py](Graphs/number_of_connected_components.py) — Number Of Connected Components
@@ -163,6 +220,7 @@ Unique solutions from the NeetCode 150 and Top Interview 150 lists.
 - [rotting_oranges.py](Graphs/rotting_oranges.py) — Rotting Oranges
 - [surrounded_regions.py](Graphs/surrounded_regions.py) — Surrounded Regions
 - [valid_tree.py](Graphs/valid_tree.py) — Valid Tree
+- [valid_tree_tree.py](Graphs/valid_tree_tree.py) — Valid Tree Tree
 - [word_ladder.py](Graphs/word_ladder.py) — Word Ladder
 
 ## Dynamic Programming
@@ -199,6 +257,7 @@ Unique solutions from the NeetCode 150 and Top Interview 150 lists.
 - [triangle.py](Dynamic_Programming/triangle.py) — Triangle
 - [unique_paths.py](Dynamic_Programming/unique_paths.py) — Unique Paths
 - [word_break.py](Dynamic_Programming/word_break.py) — Word Break
+- [word_break_hashing.py](Dynamic_Programming/word_break_hashing.py) — Word Break Hashing
 
 ## Greedy
 - [gas_station.py](Greedy/gas_station.py) — Gas Station
@@ -238,11 +297,15 @@ Unique solutions from the NeetCode 150 and Top Interview 150 lists.
 
 ## Trie
 - [design_add_and_search_words_data_structure.py](Trie/design_add_and_search_words_data_structure.py) — Design Add And Search Words Data Structure
+- [design_add_and_search_words_data_structure_hashing.py](Trie/design_add_and_search_words_data_structure_hashing.py) — Design Add And Search Words Data Structure Hashing
 - [implement_trie.py](Trie/implement_trie.py) — Implement Trie
+- [implement_trie_tree.py](Trie/implement_trie_tree.py) — Implement Trie Tree
 
 ## Advanced Graphs
 - [alien_dictionary.py](Advanced_Graphs/alien_dictionary.py) — Alien Dictionary
+- [alien_dictionary_hashing.py](Advanced_Graphs/alien_dictionary_hashing.py) — Alien Dictionary Hashing
 - [cheapest_flights_within_k_stops.py](Advanced_Graphs/cheapest_flights_within_k_stops.py) — Cheapest Flights Within K Stops
+- [cheapest_flights_within_k_stops_heap.py](Advanced_Graphs/cheapest_flights_within_k_stops_heap.py) — Cheapest Flights Within K Stops Heap
 - [network_delay_time.py](Advanced_Graphs/network_delay_time.py) — Network Delay Time
 
 ## Strings
@@ -258,8 +321,10 @@ Unique solutions from the NeetCode 150 and Top Interview 150 lists.
 
 ## Queue
 - [design_circular_queue.py](Queue/design_circular_queue.py) — Design Circular Queue
+- [design_circular_queue_bfs.py](Queue/design_circular_queue_bfs.py) — Design Circular Queue Bfs
 - [moving_average_from_data_stream.py](Queue/moving_average_from_data_stream.py) — Moving Average From Data Stream
 - [number_of_recent_calls.py](Queue/number_of_recent_calls.py) — Number Of Recent Calls
+- [number_of_recent_calls_hashing.py](Queue/number_of_recent_calls_hashing.py) — Number Of Recent Calls Hashing
 - [zigzag_iterator.py](Queue/zigzag_iterator.py) — Zigzag Iterator
 
 ## Prefix Sum
@@ -278,5 +343,5 @@ Unique solutions from the NeetCode 150 and Top Interview 150 lists.
 - [insert_delete_getrandom_o1.py](Design/insert_delete_getrandom_o1.py) — Insert Delete Getrandom O1
 - [logger_rate_limiter.py](Design/logger_rate_limiter.py) — Logger Rate Limiter
 - [min_stack.py](Design/min_stack.py) — Min Stack
+- [min_stack_stack.py](Design/min_stack_stack.py) — Min Stack Stack
 - [time_based_key_value_store.py](Design/time_based_key_value_store.py) — Time Based Key Value Store
-
