@@ -1,0 +1,586 @@
+{
+    "Competitive programming": {
+        "prefix": "cp",
+        "body": [
+            "#include <bits/stdc++.h>",
+            "using namespace std;",
+            "",
+            "using ll = long long;",
+            "using pii = pair<int, int>;",
+            "using vi = vector<int>;",
+            "",
+            "void solve() {",
+            "\t$0",
+            "}",
+            "",
+            "int main() {",
+            "\tios::sync_with_stdio(false);",
+            "\tcin.tie(nullptr);",
+            "\tint t = 1;",
+            "\t// cin >> t;",
+            "\twhile (t--) solve();",
+            "\treturn 0;",
+            "}"
+        ],
+        "description": "Competitive programming starter template"
+    },
+    "Fast IO": {
+        "prefix": "fastio",
+        "body": [
+            "ios::sync_with_stdio(false);",
+            "cin.tie(nullptr);"
+        ],
+        "description": "Enable fast C++ input and output"
+    },
+    "For loop": {
+        "prefix": "fori",
+        "body": [
+            "for (int ${1:i} = 0; ${1:i} < ${2:n}; ++${1:i}) {",
+            "\t$0",
+            "}"
+        ],
+        "description": "Index-based for loop"
+    },
+    "Range-based loop": {
+        "prefix": "forr",
+        "body": [
+            "for (const auto& ${1:value} : ${2:container}) {",
+            "\t$0",
+            "}"
+        ],
+        "description": "Range-based loop over a container"
+    },
+    "Vector declaration": {
+        "prefix": "vec",
+        "body": [
+            "vector<${1:int}> ${2:values}(${3:n});"
+        ],
+        "description": "Declare a vector with a size"
+    },
+    "Read vector": {
+        "prefix": "readvec",
+        "body": [
+            "vector<${1:int}> ${2:values}(${3:n});",
+            "for (auto& value : ${2:values}) cin >> value;"
+        ],
+        "description": "Declare and read a vector"
+    },
+    "Frequency map": {
+        "prefix": "freq",
+        "body": [
+            "unordered_map<${1:int}, int> ${2:frequency};",
+            "for (const auto& ${3:value} : ${4:values}) {",
+            "\t++${2:frequency}[${3:value}];",
+            "}"
+        ],
+        "description": "Count values with an unordered_map"
+    },
+    "Priority queue": {
+        "prefix": "pq",
+        "body": [
+            "priority_queue<${1:int}> ${2:pq};"
+        ],
+        "description": "Max heap declaration"
+    },
+    "Min heap": {
+        "prefix": "minpq",
+        "body": [
+            "priority_queue<${1:int}, vector<${1:int>>, greater<${1:int>>> ${2:minHeap};"
+        ],
+        "description": "Min heap declaration"
+    },
+    "Binary search": {
+        "prefix": "bsearch",
+        "body": [
+            "int left = 0;",
+            "int right = static_cast<int>(${1:values}.size()) - 1;",
+            "while (left <= right) {",
+            "\tint mid = left + (right - left) / 2;",
+            "\tif (${1:values}[mid] == ${2:target}) {",
+            "\t\t$0",
+            "\t\tbreak;",
+            "\t} else if (${1:values}[mid] < ${2:target}) {",
+            "\t\tleft = mid + 1;",
+            "\t} else {",
+            "\t\tright = mid - 1;",
+            "\t}",
+            "}"
+        ],
+        "description": "Binary search in a sorted vector"
+    },
+    "BFS graph traversal": {
+        "prefix": "bfs",
+        "body": [
+            "queue<int> q;",
+            "vector<bool> visited(${1:n}, false);",
+            "q.push(${2:start});",
+            "visited[${2:start}] = true;",
+            "while (!q.empty()) {",
+            "\tint node = q.front();",
+            "\tq.pop();",
+            "\t$0",
+            "\tfor (int neighbor : ${3:graph}[node]) {",
+            "\t\tif (!visited[neighbor]) {",
+            "\t\t\tvisited[neighbor] = true;",
+            "\t\t\tq.push(neighbor);",
+            "\t\t}",
+            "\t}",
+            "}"
+        ],
+        "description": "Breadth-first traversal for an adjacency list"
+    },
+    "DFS graph traversal": {
+        "prefix": "dfs",
+        "body": [
+            "function<void(int)> dfs = [&](int node) {",
+            "\tvisited[node] = true;",
+            "\t$0",
+            "\tfor (int neighbor : ${1:graph}[node]) {",
+            "\t\tif (!visited[neighbor]) dfs(neighbor);",
+            "\t}",
+            "};",
+            "dfs(${2:start});"
+        ],
+        "description": "Recursive depth-first traversal for an adjacency list"
+    },
+    "Disjoint set union": {
+        "prefix": "dsu",
+        "body": [
+            "struct DSU {",
+            "\tvector<int> parent, size;",
+            "",
+            "\tDSU(int n) : parent(n), size(n, 1) {",
+            "\t\tiota(parent.begin(), parent.end(), 0);",
+            "\t}",
+            "",
+            "\tint find(int node) {",
+            "\t\treturn parent[node] == node ? node : parent[node] = find(parent[node]);",
+            "\t}",
+            "",
+            "\tbool unite(int a, int b) {",
+            "\t\ta = find(a);",
+            "\t\tb = find(b);",
+            "\t\tif (a == b) return false;",
+            "\t\tif (size[a] < size[b]) swap(a, b);",
+            "\t\tparent[b] = a;",
+            "\t\tsize[a] += size[b];",
+            "\t\treturn true;",
+            "\t}",
+            "};"
+        ],
+        "description": "Union-find with path compression and union by size"
+    },
+    "Sort vector": {
+        "prefix": "sortv",
+        "body": [
+            "sort(${1:values}.begin(), ${1:values}.end());"
+        ],
+        "description": "Sort a vector in ascending order"
+    },
+    "Custom sort": {
+        "prefix": "sortcustom",
+        "body": [
+            "sort(${1:values}.begin(), ${1:values}.end(), [](const auto& a, const auto& b) {",
+            "\treturn ${2:a < b};",
+            "});"
+        ],
+        "description": "Sort with a custom comparator"
+    },
+    "C++ with fast IO": {
+        "prefix": "cpp",
+        "body": [
+            "#include <bits/stdc++.h>",
+            "using namespace std;",
+            "",
+            "int main() {",
+            "\tios::sync_with_stdio(false);",
+            "\tcin.tie(nullptr);",
+            "\t$0",
+            "\treturn 0;",
+            "}"
+        ],
+        "description": "C++ template with fast IO"
+    },
+    "C++ main function": {
+        "prefix": "main",
+        "body": [
+            "int main() {",
+            "\t$0",
+            "\treturn 0;",
+            "}"
+        ],
+        "description": "C++ main function template"
+    },
+    "C++ class template": {
+        "prefix": "class",
+        "body": [
+            "class ${1:ClassName} {",
+            "public:",
+            "\t${1:ClassName}() {",
+            "\t\t$0",
+            "\t}",
+            "};"
+        ],
+        "description": "C++ class template"
+    },
+    "C++ struct template": {
+        "prefix": "struct",
+        "body": [
+            "struct ${1:StructName} {",
+            "\t$0",
+            "};"
+        ],
+        "description": "C++ struct template"
+    },
+    "Lambda function": {
+        "prefix": "lambda",
+        "body": [
+            "auto ${1:func} = [](${2:args}) {",
+            "\t$0",
+            "};"
+        ],
+        "description": "C++ lambda function template"
+    },
+    "Template function": {
+        "prefix": "template",
+        "body": [
+            "template <typename ${1:T}>",
+            "${2:void} ${3:functionName}(${4:args}) {",
+            "\t$0",
+            "}"
+        ],
+        "description": "C++ template function"
+    },
+    "Try-catch block": {
+        "prefix": "trycatch",
+        "body": [
+            "try {",
+            "\t$0",
+            "} catch (const ${1:exceptionType}& e) {",
+            "\t\tcerr << \"Error: \" << e.what() << endl;",
+            "\t}"
+        ],
+        "description": "C++ try-catch block"
+    },
+    "C++ IO": {
+        "prefix": "cppio",
+        "body": [
+            "#include <iostream>",
+            "using namespace std;",
+            "",
+            "int main() {",
+            "\t$0",
+            "\treturn 0;",
+            "}"
+        ],
+        "description": "C++ template with IO"
+    },
+    "Read test cases": {
+        "prefix": "testcases",
+        "body": [
+            "int t;",
+            "cin >> t;",
+            "while (t--) {",
+            "\t$0",
+            "}"
+        ],
+        "description": "Loop over test cases"
+    },
+    "Sort descending": {
+        "prefix": "sortd",
+        "body": [
+            "sort(${1:values}.begin(), ${1:values}.end(), greater<${2:int}>());$0"
+        ],
+        "description": "Sort a container in descending order"
+    },
+    "Custom sort lambda": {
+        "prefix": "sortlambda",
+        "body": [
+            "sort(${1:values}.begin(), ${1:values}.end(), [](const auto& left, const auto& right) {",
+            "\treturn ${2:left < right};",
+            "});$0"
+        ],
+        "description": "Sort with a custom comparator lambda"
+    },
+    "Lower bound": {
+        "prefix": "lowerbound",
+        "body": [
+            "int index = lower_bound(${1:values}.begin(), ${1:values}.end(), ${2:value}) - ${1:values}.begin();$0"
+        ],
+        "description": "Find the first position not less than a value"
+    },
+    "Max heap": {
+        "prefix": "maxheap",
+        "body": [
+            "priority_queue<${1:int}> max_heap;",
+            "$0"
+        ],
+        "description": "Create a max priority queue"
+    },
+    "Graph adjacency list": {
+        "prefix": "graph",
+        "body": [
+            "vector<vector<int>> graph(${1:n});",
+            "for (int edge = 0; edge < ${2:m}; ++edge) {",
+            "\tint from, to;",
+            "\tcin >> from >> to;",
+            "\tgraph[from].push_back(to);",
+            "\tgraph[to].push_back(from);",
+            "}",
+            "$0"
+        ],
+        "description": "Build an undirected adjacency list"
+    },
+    "Print vector": {
+        "prefix": "printvec",
+        "body": [
+            "for (int index = 0; index < static_cast<int>(${1:values}.size()); ++index) {",
+            "\tif (index) cout << ' ';",
+            "\tcout << ${1:values}[index];",
+            "}",
+            "cout << '\\n';$0"
+        ],
+        "description": "Print vector values separated by spaces"
+    },
+    "Standard includes": {
+        "prefix": "cppstd",
+        "body": [
+            "#include <algorithm>",
+            "#include <cassert>",
+            "#include <iostream>",
+            "#include <memory>",
+            "#include <optional>",
+            "#include <queue>",
+            "#include <string>",
+            "#include <unordered_map>",
+            "#include <unordered_set>",
+            "#include <vector>",
+            "$0"
+        ],
+        "description": "Common standard library includes"
+    },
+    "Typed function": {
+        "prefix": "cppfunc",
+        "body": [
+            "${1:return_type} ${2:function_name}(const ${3:Type}& ${4:value}) {",
+            "\t$0",
+            "}"
+        ],
+        "description": "Create a typed C++ function"
+    },
+    "Modern class": {
+        "prefix": "cppclass",
+        "body": [
+            "class ${1:ClassName} {",
+            "public:",
+            "\texplicit ${1:ClassName}(${2:Type} ${3:value}) : ${4:member}(${3:value}) {}",
+            "",
+            "\t${5:return_type} ${6:method}() const {",
+            "\t\t$0",
+            "\t}",
+            "",
+            "private:",
+            "\t${2:Type} ${4:member};",
+            "};"
+        ],
+        "description": "Create a class with constructor and private state"
+    },
+    "Smart pointer": {
+        "prefix": "smartptr",
+        "body": [
+            "auto ${1:object} = make_unique<${2:Type}>(${3:constructor_args});$0"
+        ],
+        "description": "Create an object with unique ownership"
+    },
+    "Optional result": {
+        "prefix": "optional",
+        "body": [
+            "optional<${1:Type}> ${2:result};",
+            "if (${3:condition}) {",
+            "\t${2:result} = ${4:value};",
+            "}",
+            "$0"
+        ],
+        "description": "Represent a value that may be absent"
+    },
+    "File input": {
+        "prefix": "fileio",
+        "body": [
+            "ifstream input(${1:\"input.txt\"});",
+            "if (!input) throw runtime_error(\"Unable to open input file\");",
+            "${2:string} value;",
+            "while (input >> value) {",
+            "\t$0",
+            "}"
+        ],
+        "description": "Read values from a file with validation"
+    },
+    "Read matrix": {
+        "prefix": "matrixin",
+        "body": [
+            "int rows, columns;",
+            "cin >> rows >> columns;",
+            "vector<vector<${1:int}>> matrix(rows, vector<${1:int}>(columns));",
+            "for (auto& row : matrix) for (auto& value : row) cin >> value;",
+            "$0"
+        ],
+        "description": "Read a two-dimensional matrix"
+    },
+    "Prefix sums": {
+        "prefix": "prefixsumcpp",
+        "body": [
+            "vector<long long> prefix(${1:values}.size() + 1);",
+            "for (size_t index = 0; index < ${1:values}.size(); ++index) prefix[index + 1] = prefix[index] + ${1:values}[index];",
+            "$0"
+        ],
+        "description": "Build a one-dimensional prefix sum array"
+    },
+    "Two pointers": {
+        "prefix": "twopointerscpp",
+        "body": [
+            "int left = 0, right = static_cast<int>(${1:values}.size()) - 1;",
+            "while (left < right) {",
+            "\tlong long current = ${1:values}[left] + ${1:values}[right];",
+            "\tif (${2:condition}) {",
+            "\t\t$0",
+            "\t} else if (current < ${3:target}) ++left;",
+            "\telse --right;",
+            "}"
+        ],
+        "description": "Two-pointer traversal over a sorted vector"
+    },
+    "Grid directions": {
+        "prefix": "directions",
+        "body": [
+            "const vector<pair<int, int>> directions = {{-1, 0}, {1, 0}, {0, -1}, {0, 1}};",
+            "for (auto [row_delta, column_delta] : directions) {",
+            "\tint next_row = ${1:row} + row_delta;",
+            "\tint next_column = ${2:column} + column_delta;",
+            "\tif (next_row < 0 || next_row >= ${3:rows} || next_column < 0 || next_column >= ${4:columns}) continue;",
+            "\t$0",
+            "}"
+        ],
+        "description": "Four-direction grid traversal"
+    },
+    "Disjoint set union extended": {
+        "prefix": "dsucpp",
+        "body": [
+            "vector<int> parent(${1:n}), size(${1:n}, 1);",
+            "iota(parent.begin(), parent.end(), 0);",
+            "function<int(int)> find = [&](int node) { return parent[node] == node ? node : parent[node] = find(parent[node]); };",
+            "auto unite = [&](int first, int second) {",
+            "\tfirst = find(first); second = find(second);",
+            "\tif (first == second) return false;",
+            "\tif (size[first] < size[second]) swap(first, second);",
+            "\tparent[second] = first; size[first] += size[second]; return true;",
+            "};",
+            "$0"
+        ],
+        "description": "Disjoint set union with path compression and size"
+    },
+    "Dijkstra": {
+        "prefix": "dijkstracpp",
+        "body": [
+            "vector<long long> distance(${1:n}, numeric_limits<long long>::max());",
+            "priority_queue<pair<long long, int>, vector<pair<long long, int>>, greater<>> pending;",
+            "distance[${2:start}] = 0; pending.push({0, ${2:start}});",
+            "while (!pending.empty()) {",
+            "\tauto [current_distance, node] = pending.top(); pending.pop();",
+            "\tif (current_distance != distance[node]) continue;",
+            "\tfor (auto [next, weight] : graph[node]) if (current_distance + weight < distance[next]) {",
+            "\t\tdistance[next] = current_distance + weight; pending.push({distance[next], next});",
+            "\t}",
+            "\t$0",
+            "}"
+        ],
+        "description": "Dijkstra shortest paths for nonnegative weights"
+    },
+    "Topological sort": {
+        "prefix": "toposortcpp",
+        "body": [
+            "vector<int> indegree(${1:n});",
+            "for (int node = 0; node < ${1:n}; ++node) for (int next : graph[node]) ++indegree[next];",
+            "queue<int> pending;",
+            "for (int node = 0; node < ${1:n}; ++node) if (indegree[node] == 0) pending.push(node);",
+            "vector<int> order;",
+            "while (!pending.empty()) {",
+            "\tint node = pending.front(); pending.pop(); order.push_back(node);",
+            "\tfor (int next : graph[node]) if (--indegree[next] == 0) pending.push(next);",
+            "}",
+            "$0"
+        ],
+        "description": "Kahn's algorithm for topological ordering"
+    },
+    "Tree node": {
+        "prefix": "treenode",
+        "body": [
+            "struct TreeNode {",
+            "\tint value; TreeNode* left = nullptr; TreeNode* right = nullptr;",
+            "\texplicit TreeNode(int value) : value(value) {}",
+            "};",
+            "$0"
+        ],
+        "description": "Define a binary tree node"
+    },
+    "Linked list node": {
+        "prefix": "listnodecpp",
+        "body": [
+            "struct ListNode {",
+            "\tint value; ListNode* next = nullptr;",
+            "\texplicit ListNode(int value) : value(value) {}",
+            "};",
+            "$0"
+        ],
+        "description": "Define a singly linked list node"
+    },
+    "Fenwick tree": {
+        "prefix": "fenwick",
+        "body": [
+            "class FenwickTree {",
+            "public:",
+            "\texplicit FenwickTree(int size) : tree(size + 1) {}",
+            "\tvoid add(int index, long long value) { for (++index; index < static_cast<int>(tree.size()); index += index & -index) tree[index] += value; }",
+            "\tlong long sum(int index) const { long long result = 0; for (++index; index > 0; index -= index & -index) result += tree[index]; return result; }",
+            "private:",
+            "\tvector<long long> tree;",
+            "};",
+            "$0"
+        ],
+        "description": "Fenwick tree for point updates and prefix sums"
+    },
+    "Sieve": {
+        "prefix": "sieve",
+        "body": [
+            "vector<bool> is_prime(${1:n} + 1, true);",
+            "is_prime[0] = is_prime[1] = false;",
+            "for (int value = 2; value * value <= ${1:n}; ++value) if (is_prime[value]) for (int multiple = value * value; multiple <= ${1:n}; multiple += value) is_prime[multiple] = false;",
+            "$0"
+        ],
+        "description": "Find all primes up to a limit"
+    },
+    "Fast modular power": {
+        "prefix": "modpow",
+        "body": [
+            "long long result = 1;",
+            "for (long long exponent = ${3:power}; exponent > 0; exponent >>= 1) {",
+            "\tif (exponent & 1) result = result * ${1:base} % ${2:MOD};",
+            "\t${1:base} = ${1:base} * ${1:base} % ${2:MOD};",
+            "}",
+            "$0"
+        ],
+        "description": "Binary exponentiation under a modulus"
+    },
+    "Memoized recursion": {
+        "prefix": "memocpp",
+        "body": [
+            "vector<long long> memo(${1:n}, -1);",
+            "function<long long(int)> dp = [&](int state) -> long long {",
+            "\tif (${2:base_case}) return ${3:base_value};",
+            "\tif (memo[state] != -1) return memo[state];",
+            "\treturn memo[state] = ${4:transition};",
+            "};",
+            "$0"
+        ],
+        "description": "Top-down dynamic programming with memoization"
+    }
+}

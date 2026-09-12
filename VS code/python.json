@@ -1,0 +1,460 @@
+{
+    "Python competitive programming main": {
+        "prefix": "pymain",
+        "body": [
+            "import sys",
+            "",
+            "input = sys.stdin.readline",
+            "",
+            "def solve():",
+            "    $0",
+            "",
+            "if __name__ == '__main__':",
+            "    solve()"
+        ],
+        "description": "Fast Python main function for competitive programming"
+    },
+    "Fast input": {
+        "prefix": "pyinput",
+        "body": [
+            "import sys",
+            "input = sys.stdin.readline",
+            "$0"
+        ],
+        "description": "Use fast standard input"
+    },
+    "Read integers": {
+        "prefix": "ints",
+        "body": [
+            "${1:a}, ${2:b} = map(int, input().split())$0"
+        ],
+        "description": "Read space-separated integers"
+    },
+    "Read integer list": {
+        "prefix": "intlist",
+        "body": [
+            "${1:values} = list(map(int, input().split()))$0"
+        ],
+        "description": "Read a line of integers into a list"
+    },
+    "Test cases": {
+        "prefix": "pytc",
+        "body": [
+            "for _ in range(int(input())):",
+            "    $0"
+        ],
+        "description": "Loop over test cases"
+    },
+    "Enumerate loop": {
+        "prefix": "enumerate",
+        "body": [
+            "for ${1:index}, ${2:value} in enumerate(${3:items}):",
+            "    $0"
+        ],
+        "description": "Loop with indexes using enumerate"
+    },
+    "Frequency counter": {
+        "prefix": "counter",
+        "body": [
+            "from collections import Counter",
+            "${1:frequency} = Counter(${2:items})$0"
+        ],
+        "description": "Count values with collections.Counter"
+    },
+    "Default dictionary": {
+        "prefix": "defaultdict",
+        "body": [
+            "from collections import defaultdict",
+            "${1:groups} = defaultdict(list)$0"
+        ],
+        "description": "Create a defaultdict of lists"
+    },
+    "Deque": {
+        "prefix": "deque",
+        "body": [
+            "from collections import deque",
+            "${1:queue} = deque([${2:start}])$0"
+        ],
+        "description": "Create a deque for queue or BFS operations"
+    },
+    "Heap": {
+        "prefix": "heap",
+        "body": [
+            "import heapq",
+            "${1:heap} = []",
+            "heapq.heappush(${1:heap}, ${2:item})$0"
+        ],
+        "description": "Create and push to a min heap"
+    },
+    "BFS": {
+        "prefix": "pybfs",
+        "body": [
+            "from collections import deque",
+            "",
+            "queue = deque([${1:start}])",
+            "visited = {${1:start}}",
+            "while queue:",
+            "    node = queue.popleft()",
+            "    $0",
+            "    for neighbor in graph[node]:",
+            "        if neighbor not in visited:",
+            "            visited.add(neighbor)",
+            "            queue.append(neighbor)"
+        ],
+        "description": "Breadth-first traversal skeleton"
+    },
+    "DFS function": {
+        "prefix": "pydfs",
+        "body": [
+            "def dfs(node):",
+            "    visited.add(node)",
+            "    $0",
+            "    for neighbor in graph[node]:",
+            "        if neighbor not in visited:",
+            "            dfs(neighbor)"
+        ],
+        "description": "Recursive depth-first traversal skeleton"
+    },
+    "Graph adjacency list": {
+        "prefix": "pygraph",
+        "body": [
+            "from collections import defaultdict",
+            "",
+            "graph = defaultdict(list)",
+            "for _ in range(${1:edges}):",
+            "    ${2:source}, ${3:target} = map(int, input().split())",
+            "    graph[${2:source}].append(${3:target})",
+            "    graph[${3:target}].append(${2:source})",
+            "$0"
+        ],
+        "description": "Build an undirected adjacency list"
+    },
+    "Binary search": {
+        "prefix": "pybinary",
+        "body": [
+            "left, right = 0, len(${1:items}) - 1",
+            "while left <= right:",
+            "    middle = (left + right) // 2",
+            "    if ${2:condition}:",
+            "        $0",
+            "    elif ${3:target} < ${1:items}[middle]:",
+            "        right = middle - 1",
+            "    else:",
+            "        left = middle + 1"
+        ],
+        "description": "Classic binary search skeleton"
+    },
+    "Sorted key": {
+        "prefix": "sortkey",
+        "body": [
+            "${1:items}.sort(key=lambda item: ${2:item[0]})$0"
+        ],
+        "description": "Sort a collection using a key function"
+    },
+    "Print answer": {
+        "prefix": "pyprint",
+        "body": [
+            "print(${1:answer})$0"
+        ],
+        "description": "Print a solution value"
+    },
+    "Modulo constant": {
+        "prefix": "pymod",
+        "body": [
+            "MOD = ${1:1_000_000_007}$0"
+        ],
+        "description": "Common modulo constant"
+    },
+    "Typed function": {
+        "prefix": "defn",
+        "body": [
+            "def ${1:function_name}(${2:argument}: ${3:str}) -> ${4:str}:",
+            "    \"\"\"${5:Describe the function.}\"\"\"",
+            "    $0"
+        ],
+        "description": "Create a typed function with a docstring"
+    },
+    "Class": {
+        "prefix": "classpy",
+        "body": [
+            "class ${1:ClassName}:",
+            "    \"\"\"${2:Describe the class.}\"\"\"",
+            "",
+            "    def __init__(self, ${3:argument}: ${4:str}) -> None:",
+            "        self.${5:value} = ${3:argument}",
+            "        $0"
+        ],
+        "description": "Create a typed Python class"
+    },
+    "Dataclass": {
+        "prefix": "dataclasspy",
+        "body": [
+            "from dataclasses import dataclass",
+            "",
+            "@dataclass(slots=True)",
+            "class ${1:ModelName}:",
+            "    ${2:name}: ${3:str}",
+            "    $0"
+        ],
+        "description": "Create a dataclass model"
+    },
+    "Try except": {
+        "prefix": "tryex",
+        "body": [
+            "try:",
+            "    $1",
+            "except ${2:Exception} as error:",
+            "    ${3:handle_error}(error)",
+            "$0"
+        ],
+        "description": "Handle an expected exception"
+    },
+    "Logger setup": {
+        "prefix": "loggerpy",
+        "body": [
+            "import logging",
+            "",
+            "logging.basicConfig(",
+            "    level=logging.${1:INFO},",
+            "    format=\"%(asctime)s %(levelname)s %(name)s: %(message)s\",",
+            ")",
+            "logger = logging.getLogger(__name__)",
+            "$0"
+        ],
+        "description": "Configure a module logger"
+    },
+    "Argument parser": {
+        "prefix": "argparsepy",
+        "body": [
+            "import argparse",
+            "",
+            "parser = argparse.ArgumentParser(description=${1:\"Description\"})",
+            "parser.add_argument(\"--${2:name}\", ${3:required=True}, help=${4:\"Help text\"})",
+            "args = parser.parse_args()",
+            "$0"
+        ],
+        "description": "Create a command-line argument parser"
+    },
+    "Pytest test": {
+        "prefix": "pytestfn",
+        "body": [
+            "def test_${1:behavior}() -> None:",
+            "    ${2:result} = ${3:call}(${4:arguments})",
+            "    assert ${2:result} == ${5:expected}",
+            "    $0"
+        ],
+        "description": "Create a pytest test function"
+    },
+    "Async function": {
+        "prefix": "asyncdef",
+        "body": [
+            "import asyncio",
+            "",
+            "async def ${1:function_name}() -> None:",
+            "    $0",
+            "",
+            "asyncio.run(${1:function_name}())"
+        ],
+        "description": "Create and run an async function"
+    },
+    "Context manager": {
+        "prefix": "contextmanager",
+        "body": [
+            "from contextlib import contextmanager",
+            "",
+            "@contextmanager",
+            "def ${1:resource}():",
+            "    ${2:value} = ${3:acquire}()",
+            "    try:",
+            "        yield ${2:value}",
+            "    finally:",
+            "        ${4:release}(${2:value})",
+            "$0"
+        ],
+        "description": "Create a context manager with cleanup"
+    },
+    "Pathlib path": {
+        "prefix": "pathlibpy",
+        "body": [
+            "from pathlib import Path",
+            "",
+            "${1:path} = Path(${2:\".\"})",
+            "$0"
+        ],
+        "description": "Start working with pathlib"
+    },
+    "Prefix sums": {
+        "prefix": "prefixsum",
+        "body": [
+            "prefix = [0]",
+            "for value in ${1:values}:",
+            "    prefix.append(prefix[-1] + value)",
+            "$0"
+        ],
+        "description": "Build a one-dimensional prefix sum array"
+    },
+    "Two pointers": {
+        "prefix": "twopointers",
+        "body": [
+            "left, right = 0, len(${1:items}) - 1",
+            "while left < right:",
+            "    ${2:current} = ${1:items}[left] + ${1:items}[right]",
+            "    if ${3:condition}:",
+            "        $0",
+            "    elif ${4:current} < ${5:target}:",
+            "        left += 1",
+            "    else:",
+            "        right -= 1"
+        ],
+        "description": "Two-pointer array traversal"
+    },
+    "Sliding window": {
+        "prefix": "window",
+        "body": [
+            "left = 0",
+            "for right, value in enumerate(${1:items}):",
+            "    ${2:state}.add(value)",
+            "    while ${3:window_is_invalid}:",
+            "        ${2:state}.remove(${1:items}[left])",
+            "        left += 1",
+            "    $0"
+        ],
+        "description": "Variable-size sliding window"
+    },
+    "Monotonic stack": {
+        "prefix": "monostack",
+        "body": [
+            "stack = []",
+            "for index, value in enumerate(${1:items}):",
+            "    while stack and ${2:items}[stack[-1]] ${3:<} value:",
+            "        previous = stack.pop()",
+            "        $0",
+            "    stack.append(index)"
+        ],
+        "description": "Monotonic stack for next greater or smaller values"
+    },
+    "Union find": {
+        "prefix": "dsu",
+        "body": [
+            "parent = list(range(${1:n}))",
+            "size = [1] * ${1:n}",
+            "",
+            "def find(node: int) -> int:",
+            "    while node != parent[node]:",
+            "        parent[node] = parent[parent[node]]",
+            "        node = parent[node]",
+            "    return node",
+            "",
+            "def union(first: int, second: int) -> bool:",
+            "    first, second = find(first), find(second)",
+            "    if first == second:",
+            "        return False",
+            "    if size[first] < size[second]:",
+            "        first, second = second, first",
+            "    parent[second] = first",
+            "    size[first] += size[second]",
+            "    return True",
+            "$0"
+        ],
+        "description": "Disjoint set union with path compression"
+    },
+    "Linked list node": {
+        "prefix": "listnode",
+        "body": [
+            "class ListNode:",
+            "    def __init__(self, value: int = 0, next_node: \"ListNode | None\" = None) -> None:",
+            "        self.value = value",
+            "        self.next = next_node",
+            "$0"
+        ],
+        "description": "Define a singly linked list node"
+    },
+    "Trie node": {
+        "prefix": "trie",
+        "body": [
+            "class TrieNode:",
+            "    def __init__(self) -> None:",
+            "        self.children: dict[str, TrieNode] = {}",
+            "        self.is_word = False",
+            "$0"
+        ],
+        "description": "Define a trie node"
+    },
+    "Topological sort": {
+        "prefix": "toposort",
+        "body": [
+            "from collections import deque",
+            "",
+            "indegree = [0] * ${1:n}",
+            "for node in range(${1:n}):",
+            "    for neighbor in graph[node]:",
+            "        indegree[neighbor] += 1",
+            "queue = deque(node for node in range(${1:n}) if indegree[node] == 0)",
+            "order = []",
+            "while queue:",
+            "    node = queue.popleft()",
+            "    order.append(node)",
+            "    for neighbor in graph[node]:",
+            "        indegree[neighbor] -= 1",
+            "        if indegree[neighbor] == 0:",
+            "            queue.append(neighbor)",
+            "$0"
+        ],
+        "description": "Kahn's algorithm for topological ordering"
+    },
+    "Dijkstra": {
+        "prefix": "dijkstra",
+        "body": [
+            "import heapq",
+            "",
+            "distances = [float(\"inf\")] * ${1:n}",
+            "distances[${2:start}] = 0",
+            "heap = [(0, ${2:start})]",
+            "while heap:",
+            "    distance, node = heapq.heappop(heap)",
+            "    if distance != distances[node]:",
+            "        continue",
+            "    for neighbor, weight in graph[node]:",
+            "        candidate = distance + weight",
+            "        if candidate < distances[neighbor]:",
+            "            distances[neighbor] = candidate",
+            "            heapq.heappush(heap, (candidate, neighbor))",
+            "$0"
+        ],
+        "description": "Dijkstra shortest paths for nonnegative weights"
+    },
+    "Memoized recursion": {
+        "prefix": "memo",
+        "body": [
+            "from functools import cache",
+            "",
+            "@cache",
+            "def dp(${1:state}: ${2:int}) -> ${3:int}:",
+            "    if ${4:base_case}:",
+            "        return ${5:base_value}",
+            "    return ${6:transition}",
+            "$0"
+        ],
+        "description": "Top-down dynamic programming with caching"
+    },
+    "Backtracking": {
+        "prefix": "backtrack",
+        "body": [
+            "result = []",
+            "path = []",
+            "",
+            "def backtrack(${1:start}: int) -> None:",
+            "    if ${2:complete}:",
+            "        result.append(path.copy())",
+            "        return",
+            "    for choice in ${3:choices}:",
+            "        path.append(choice)",
+            "        backtrack(choice + 1)",
+            "        path.pop()",
+            "",
+            "backtrack(0)",
+            "$0"
+        ],
+        "description": "Backtracking search skeleton"
+    }
+}
